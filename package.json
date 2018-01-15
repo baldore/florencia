@@ -6,10 +6,18 @@
   "author": "baldore <acornssn@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "debug": "DEBUG='puppeteer:*' && ts-node src/index.js"
   },
   "devDependencies": {
+    "prettier": "1.10.2",
+    "prettierrc": "0.0.0-5",
     "ts-node": "4.1.0",
     "typescript": "2.6.2"
+  },
+  "dependencies": {
+    "@types/puppeteer": "0.13.9",
+    "puppeteer": "1.0.0",
+    "tslib": "1.8.1"
   }
 }
