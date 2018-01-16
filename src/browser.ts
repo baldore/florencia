@@ -1,10 +1,7 @@
 import * as puppeteer from 'puppeteer'
 
 export async function scrapImagesFrom(link: string): Promise<string[]> {
-  const browser = await puppeteer.launch({
-    // headless: false,
-    // devtools: true,
-  })
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
   await page.goto(link)
