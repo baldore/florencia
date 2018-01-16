@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "debug": "DEBUG='puppeteer:*' && ts-node src/index.js"
+    "debug": "DEBUG='puppeteer:*' && ts-node src/index.js",
+    "cli": "ts-node src/cli"
   },
   "devDependencies": {
     "prettier": "1.10.2",
@@ -17,9 +18,11 @@
   },
   "dependencies": {
     "@types/puppeteer": "0.13.9",
+    "@types/yargs": "10.0.1",
     "image-downloader": "3.3.0",
     "mkdirp-promise": "5.0.1",
     "puppeteer": "1.0.0",
-    "tslib": "1.8.1"
+    "tslib": "1.8.1",
+    "yargs": "10.1.1"
   }
 }

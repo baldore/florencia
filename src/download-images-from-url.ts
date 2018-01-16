@@ -3,16 +3,16 @@ import { downloadImages } from './download'
 
 const mkdirp = require('mkdirp-promise')
 
-// TODO: Add this link via CLI
-const link =
-  'https://www.scribd.com/doc/50073955/Gentil-Montana-Obras-Para-Guitarra'
-const destination = './downloads'
-
-async function main() {
+export default async function downloadImagesFromUrl(
+  url: string,
+  destination: string,
+) {
   try {
+    console.log(`URL: ${url}`)
+    console.log(`Downloading into: ${destination}`)
     console.log('Starting scrap')
 
-    const images = await scrapImagesFrom(link)
+    const images = await scrapImagesFrom(url)
 
     console.log(`${images.length} images found`)
     console.log('Downloading images...')
@@ -20,10 +20,8 @@ async function main() {
     await mkdirp(destination)
     await downloadImages(images, destination)
 
-    console.log('Done!!! Enjoy!!!')
+    console.log('Done!!! Enjoy!!! 🏴‍☠️')
   } catch (e) {
     throw e
   }
 }
-
-main()
